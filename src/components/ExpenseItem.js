@@ -12,8 +12,6 @@ function ExpenseItem({ title, amount, date }) {
         <div>{month}</div>
         <div>{year}</div>
         <div>{day}</div>
-
-
       </div>
       <div className='expense-item__description'>
         <h2>{title}</h2>
