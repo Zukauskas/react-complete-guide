@@ -24,3 +24,9 @@
 .new-expense__actions {
     text-align: right;
 }
+
+.new-expense__toggle {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
