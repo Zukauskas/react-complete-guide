@@ -21,13 +21,17 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
 
     const dateChangeHandler = (event) => {
         setUserInput((prevState) => {
-            return { ...prevState, enteredDate: event.target.value };
+            return { ...prevState, enteredDate:event.target.value};
         });
     };
 
     const submitHandler = (event) => {
         event.preventDefault();
-        const ExpenseData = userInput;
+        const ExpenseData = {
+            title:userInput.enteredTitle,
+            amount: +userInput.enteredAmount,
+            date: new Date(userInput.enteredDate),
+        };
         onSaveExpenseData(ExpenseData);
 
         setUserInput({
