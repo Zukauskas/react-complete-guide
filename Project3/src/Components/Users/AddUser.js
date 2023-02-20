@@ -3,7 +3,7 @@ import styles from './AddUser.module.css';
 import Button from '../UI/Button/Button';
 import Card from '../UI/Card/Card';
 
-const AddUser = () => {
+const AddUser = ({ onAddUser }) => {
     const [enteredUsername, setEnteredUsername] = useState('');
     const [enteredAge, setEnteredAge] = useState('');
 
@@ -20,7 +20,8 @@ const AddUser = () => {
         if (enteredUsername.trim().length === 0) {
             return;
         }
-        console.log(enteredUsername, enteredAge);
+
+        onAddUser(enteredUsername, enteredAge)
         setEnteredUsername('');
         setEnteredAge('');
     }
