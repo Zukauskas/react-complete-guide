@@ -1,4 +1,4 @@
-import Card from '../UI/Card/Card';
+import Card from '../UI/Card';
 import styles from './UsersList.module.css';
 
 const UserList = ({ users }) => {
